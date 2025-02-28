@@ -1,10 +1,11 @@
 <div class="container">
-    <img src="https://assets.devopness.com/images/favicon-devopness-site-512x512.png" alt="Devopness Logo" class="logo">
+    <img src="<%= @devopnessLogoURL %>" alt="Devopness Logo" class="logo logo-devopness">
     <div class="heart">❤️</div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" alt="Rails Logo" class="logo">
+    <img src="<%= @railsLogoURL %>" alt="Rails Logo" class="logo logo-rails">
 </div>
+
 <div class="description">
-    <p>With Devopness, you can easily set up and manage your Rails app deployments in the cloud without hassle.</p>
-    <br>
-    <p>Automate server provisioning, implement CI/CD pipelines, and scale your project with just a few clicks.</p>
+  <% @descriptions.each do |description| %>
+    <p><%= description %></p>
+  <% end %>
 </div>
